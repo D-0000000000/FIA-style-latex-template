@@ -1,0 +1,98 @@
+\documentclass[a4paper]{article}
+\usepackage[left=0.5625in,right=0.5625in,top=0.5625in,includehead,nomarginpar]{geometry}
+\usepackage{fontspec}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{layout}
+\usepackage{parskip}
+\setmainfont{Arial}
+\setlength{\headheight}{48.98737pt}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\setlength{\parindent}{0pt}
+\setlength{\headsep}{18pt}
+
+\fancypagestyle{fiaheader}{%
+  \fancyhf{}
+  % \fancyhead[C]{\makebox[\textwidth][c]{\includegraphics[scale=0.375]{header.png}}}
+  \fancyhead[C]{\makebox[\textwidth][c]{\includegraphics[scale=0.375]{headers/DefaultHeader.png}}}
+  % \fancyhead[C]{mid}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+\setstretch{0.84375}
+
+\begin{document}
+
+\thispagestyle{fiaheader}
+
+\begin{center}
+  \textbf{
+    {\fontsize{21}{22}\selectfont T}
+    {\fontsize{18}{22}\selectfont ITLE }
+    {\fontsize{21}{22}\selectfont G}
+    {\fontsize{18}{22}\selectfont OES }
+    {\fontsize{21}{22}\selectfont H}
+    {\fontsize{18}{22}\selectfont ERE }
+  }\\[2pt]
+  \textbf{
+    {\fontsize{13}{30}\selectfont Date Goes Here}%
+  }
+\end{center}
+
+\vspace{6pt}
+\hrulefill
+\vspace{4.5pt}
+
+% \renewcommand{\arraystretch}{2.0}
+\begin{tabularx}{\textwidth}{
+  @{}>{\raggedright\leftskip=6pt\arraybackslash}p{62.5pt} 
+  @{}>{\raggedright\leftskip=6pt\arraybackslash}X
+  @{}>{\raggedright\leftskip=6pt\arraybackslash}p{62.5pt} 
+  @{}>{\raggedright\leftskip=6pt\arraybackslash}p{105pt} 
+}
+%  & & & \\
+\textbf{From} & From & \textbf{Document} & Doc No \\ [10pt]
+\textbf{To} & To & \textbf{Date} & Date \\ [10pt]
+ & & \textbf{Time} & Time 
+\end{tabularx}
+
+\vspace{6pt}
+\hrulefill
+
+\vspace{\baselineskip}
+
+\begin{tabularx}{\textwidth}{
+  @{}>{\raggedright\leftskip=6pt\arraybackslash}p{78pt} 
+  @{}>{\raggedright\leftskip=0pt\arraybackslash}X
+}
+\textbf{\fontsize{11}{16}\selectfont Item} & \fontsize{11}{16}\selectfont Description \newline \\
+\textbf{\fontsize{11}{16}\selectfont Usage} & 
+\fontsize{11}{16}\selectfont
+FIA-style document latex template.\par
+Replace what you what to replace. Just fill or expand some tabularx. But remember proper use only.\par
+Font is Arial. Header Image resolution is 1366x120. As there is no CJK character in FIA documents, CJK was not supported.\par
+Run 'xelatex docuemnt.tex' to build document \newline \\
+\textbf{\fontsize{11}{16}\selectfont Dsclaimer} & 
+\fontsize{11}{16}\selectfont
+PROPER USE ONLY AND USE AT YOUR OWN RISKS\par
+Do not use this template in any inappropriate, illegal, harmful, or abusive. The template provider assumes no liability for misuse or any resulting damages.\par
+This repo has no affiliation to FIA or related.\par
+\end{tabularx}
+
+\vspace{2.6667\baselineskip}
+
+\textbf{\fontsize{11}{16}\selectfont
+\begin{tabularx}{\textwidth}{
+  @{}>{\raggedright\leftskip=6pt\arraybackslash}X
+  @{}>{\raggedright\leftskip=6pt\arraybackslash}X
+}
+Author & Name \\ [17pt]
+Here & \\ [17pt]
+\end{tabularx}
+}
+
+\end{document}
